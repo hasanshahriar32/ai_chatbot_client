@@ -87,7 +87,7 @@ const AiQuery2 = () => {
       };
       setMessageSearch([]);
       fetch(
-        `https://neuronex-server.onrender.com/generate/prompt/${localStorage.getItem(
+        `https://hstu-aichat-server.onrender.com/generate/prompt/${localStorage.getItem(
           "user_id"
         )}`,
         {
@@ -181,7 +181,7 @@ const AiQuery2 = () => {
         },
       };
       const { data: dataGet } = await axios.post(
-        `https://neuronex-server.vercel.app/generate/suggestions/${localStorage.getItem(
+        `https://hstu-aichat-server.vercel.app/generate/suggestions/${localStorage.getItem(
           "user_id"
         )}`,
         {
@@ -231,7 +231,7 @@ const AiQuery2 = () => {
         },
       };
       const { data: dataGet } = await axios.post(
-        "https://neuronex-server.vercel.app/session/favorite/switch",
+        "https://hstu-aichat-server.vercel.app/session/favorite/switch",
         {
           sessionId: aiConfig?.sessionId,
           uid: user?.uid,
