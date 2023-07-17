@@ -9,7 +9,7 @@ const randomNumberBetween = (min, max) => {
 };
 
 const herogif =
-  "https://i.ibb.co/d6JBXFT/Orange-and-Peach-Sale-Fundraising-Social-Issues-Slideshow-Video-1.gif";
+  "https://i.ibb.co/chQzYGn/Orange-and-Peach-Sale-Fundraising-Social-Issues-Slideshow-Video-2.gif";
 
 export const HeroImage = () => {
   const { ref, inView } = useInView({ triggerOnce: true });
