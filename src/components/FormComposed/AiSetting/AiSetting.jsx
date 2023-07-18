@@ -162,26 +162,54 @@ export default function AiSetting() {
                 {...register("subjectSelection", {})}
                 aria-invalid={errors["subjectSelection"] ? "true" : "false"}
                 defaultValue={aiConfig?.subjectSelection}
-                className="form-select select text-sm h-8 w-full select-ghost  border-secondary text-gray-700"
+                className="form-select chatScroll select text-sm h-8 w-full select-ghost  border-secondary text-gray-700"
               >
                 <option disabled selected>
                   Subject Selection
                 </option>
-                <option value="Mathematics">Mathematics</option>
+                <option value="Electronics and Communication Engineering">
+                  Electronics and Communication Engineering
+                </option>
+                <option value="Computer Science and Engineering ">
+                  Computer Science and Engineering{" "}
+                </option>
+                <option value="Electrical and Electronic Engineering ">
+                  Electrical and Electronic Engineering{" "}
+                </option>
+                <option value="Accounting">Accounting</option>
+                <option value="Finance and Banking">Finance and Banking</option>
+                <option value="Management">Management</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Fisheries">Fisheries</option>
+                <option value="Veterinary and Animal Science">
+                  Veterinary and Animal Science
+                </option>
+                <option value="Agriculture">Agriculture</option>
+                <option value="Agricultural & Industrial Engineering">
+                  Agricultural & Industrial Engineering
+                </option>
+                <option value="Food Processing & Preservation">
+                  Food Processing & Preservation
+                </option>
+                <option value="Food Engineering & Technology">
+                  Food Engineering & Technology
+                </option>
+                <option value="Food Science & Nutrition">
+                  Food Science & Nutrition
+                </option>
+                <option value="Architecture">Architecture</option>
+                <option value="Civil Engineering">Civil Engineering</option>
+                <option value="Mechanical Engineering">
+                  Mechanical Engineering
+                </option>
                 <option value="Chemistry">Chemistry</option>
                 <option value="Physics">Physics</option>
-                <option value="Literature">Literature</option>
-                <option value="IT">IT</option>
-                <option value="Biology">Biology</option>
-                <option value="History">History</option>
-                <option value="Psychology">Psychology</option>
+                <option value="Mathematics">Mathematics</option>
+                <option value="Statistics">Statistics</option>
+                <option value="English">English</option>
                 <option value="Economics">Economics</option>
                 <option value="Sociology">Sociology</option>
-                <option value="Political Science">Political Science</option>
-                <option value="Philosophy">Philosophy</option>
-                <option value="Art">Art</option>
-                <option value="Music">Music</option>
-                <option value="Geography">Geography</option>
+                <option value="Development Studies">Development Studies</option>
               </select>
               {errors["subjectSelection"] && (
                 <p role="alert" className="text-error mt-2">
