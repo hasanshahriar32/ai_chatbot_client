@@ -8,7 +8,7 @@ import DrawerToggle from "../../../layout/Dashboard/DrawerToggle";
 import { ChatContext } from "../../../Contexts/SessionContext/SessionContext";
 import { AuthContext } from "../../../Contexts/UserContext/UserContext";
 
-export default function AiSetting() {
+export default function AiSetting2() {
   const { setAiConfig, setModalState, aiConfig } = useContext(AiContext);
   const { setMessages, sesstionData, setSessionData } = useContext(ChatContext);
   const { user } = useContext(AuthContext);
@@ -19,7 +19,7 @@ export default function AiSetting() {
     reset,
   } = useForm({
     defaultValues: {
-      subjectSelection: aiConfig?.subjectSelection || "",
+      subjectSelection: "fineTune",
       assistanceLevel: aiConfig?.assistanceLevel || "",
       additionalInstruction: aiConfig?.additionalInstruction || "",
     },
@@ -147,7 +147,7 @@ export default function AiSetting() {
   return (
     <div className="card  w-full my-6 max-w-7xl">
       {/* <ToastContainer /> */}
-      <div className="card-body shadow-primary mx-[5%]  shadow-sm   flex-shrink-0 border-accent-focus bg-hero-glow bg-blend-darken shadow-transparent/90 border-dashed inset-0 border-2  bg-base-100">
+      <div className="card-body shadow-primary mx-[5%]  shadow-sm   flex-shrink-0 border-info bg-hero-glow bg-blend-darken shadow-transparent/90 border-dashed inset-0 border-2  bg-base-100">
         <form onSubmit={handleSubmit(onSubmit)} className="">
           <div className="flex flex-row-reverse justify-between flex-wrap-reverse w-full place-items-end">
             <h1 className="text-4xl font-bold">AI Configure</h1>
@@ -156,66 +156,25 @@ export default function AiSetting() {
             </div>
           </div>
 
-          <div className="mb-4 form-control">
+          <div className="mb-4 form-control hidden">
             <label className=" flex flex-col">
               <span className="label text-gray-700 text-lg flex justify-start gap-2">
                 <span>Select Your Subject to Proceed</span>
               </span>
               <select
                 {...register("subjectSelection", {
-                  required: "Please select an item.",
+                  //   required: "Please select an item.",
+                  defaultValue: "fineTune",
                 })}
                 {...register("subjectSelection", {})}
+                value="fineTune"
                 aria-invalid={errors["subjectSelection"] ? "true" : "false"}
                 defaultValue={aiConfig?.subjectSelection}
                 className="form-select chatScroll select text-sm h-8 w-full select-ghost  border-secondary text-gray-700"
               >
-                <option disabled selected>
-                  Subject Selection
+                <option value="fineTune" selected>
+                  Fine Tune
                 </option>
-                <option value="Electronics and Communication Engineering">
-                  Electronics and Communication Engineering
-                </option>
-                <option value="Computer Science and Engineering ">
-                  Computer Science and Engineering{" "}
-                </option>
-                <option value="Electrical and Electronic Engineering ">
-                  Electrical and Electronic Engineering{" "}
-                </option>
-                <option value="Accounting">Accounting</option>
-                <option value="Finance and Banking">Finance and Banking</option>
-                <option value="Management">Management</option>
-                <option value="Marketing">Marketing</option>
-                <option value="Fisheries">Fisheries</option>
-                <option value="Veterinary and Animal Science">
-                  Veterinary and Animal Science
-                </option>
-                <option value="Agriculture">Agriculture</option>
-                <option value="Agricultural & Industrial Engineering">
-                  Agricultural & Industrial Engineering
-                </option>
-                <option value="Food Processing & Preservation">
-                  Food Processing & Preservation
-                </option>
-                <option value="Food Engineering & Technology">
-                  Food Engineering & Technology
-                </option>
-                <option value="Food Science & Nutrition">
-                  Food Science & Nutrition
-                </option>
-                <option value="Architecture">Architecture</option>
-                <option value="Civil Engineering">Civil Engineering</option>
-                <option value="Mechanical Engineering">
-                  Mechanical Engineering
-                </option>
-                <option value="Chemistry">Chemistry</option>
-                <option value="Physics">Physics</option>
-                <option value="Mathematics">Mathematics</option>
-                <option value="Statistics">Statistics</option>
-                <option value="English">English</option>
-                <option value="Economics">Economics</option>
-                <option value="Sociology">Sociology</option>
-                <option value="Development Studies">Development Studies</option>
               </select>
               {errors["subjectSelection"] && (
                 <p role="alert" className="text-error mt-2">
@@ -299,7 +258,7 @@ export default function AiSetting() {
             </p>
             <button
               disabled={isSubmitting}
-              className="btn modal-action btn-accent text-md shadow-sm tracking-wide font-semibold focus:accent-accent-focus  hover:shadow-accent border border-secondary btn-lg "
+              className="btn modal-action btn-info text-md shadow-sm tracking-wide font-semibold focus:shadow-secondary-text  hover:shadow-primary hover:shadow-info border border-secondary btn-lg "
             >
               Next
             </button>
