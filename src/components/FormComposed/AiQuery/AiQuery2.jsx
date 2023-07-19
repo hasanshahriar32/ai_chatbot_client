@@ -280,7 +280,7 @@ const AiQuery2 = () => {
                   <button
                     onClick={handleFavorite}
                     type="button"
-                    className="join-item hover:scale-110 inline-flex btn btn-primary text-lg items-center justify-center rounded-lg border  transition duration-500 ease-in-out text-gray-500 hover:bg-gray-300 focus:outline-none"
+                    className="join-item hover:scale-110 inline-flex btn btn-success text-lg items-center justify-center rounded-lg border  transition duration-500 ease-in-out text-gray-500 hover:bg-gray-300 focus:outline-none"
                   >
                     {aiConfig?.isBookmarked == true ? (
                       <AiFillHeart />
@@ -291,7 +291,7 @@ const AiQuery2 = () => {
                   <label
                     // type="checkbox"
                     htmlFor="my_modal_4"
-                    className="join-item hover:scale-110 tracking-wide btn btn-primary text-sm"
+                    className="join-item hover:scale-110 tracking-wide btn btn-success text-sm"
                   >
                     <span>
                       <FiEdit3></FiEdit3>
@@ -300,7 +300,7 @@ const AiQuery2 = () => {
                   </label>
                   <button
                     onClick={() => window.print()}
-                    className="join-item hover:scale-110 btn text-lg btn-primary "
+                    className="join-item hover:scale-110 btn text-lg btn-success "
                   >
                     <AiFillPrinter />
                   </button>

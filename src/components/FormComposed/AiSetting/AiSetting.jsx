@@ -168,7 +168,7 @@ export default function AiSetting() {
                 {...register("subjectSelection", {})}
                 aria-invalid={errors["subjectSelection"] ? "true" : "false"}
                 defaultValue={aiConfig?.subjectSelection}
-                className="form-select chatScroll select text-sm h-8 w-full select-ghost  border-secondary text-gray-700"
+                className="form-select chatScroll select text-sm h-8 w-full select-ghost  border-accent text-gray-700"
               >
                 <option disabled selected>
                   Subject Selection
@@ -245,7 +245,7 @@ export default function AiSetting() {
                 return (
                   <label
                     key={value + index}
-                    className="text-sm h-8 min-w-[250px] w-full  max-w-full md:max-w-[45%] flex flex-wrap overflow-hidden items-center input input-ghost border-secondary border-solid hover:border-double focus:border-dashed mb-2"
+                    className="text-sm h-8 min-w-[250px] w-full  max-w-full md:max-w-[45%] flex flex-wrap overflow-hidden items-center input input-ghost border-accent border-solid hover:border-double focus:border-dashed mb-2"
                   >
                     <input
                       defaultValue={aiConfig?.assistanceLevel}
@@ -257,7 +257,7 @@ export default function AiSetting() {
                       }
                       value={value}
                       type="radio"
-                      className="form-radio h-4 w-4 radio radio-secondary text-indigo-600 transition duration-150 ease-in-out"
+                      className="form-radio h-4 w-4 radio radio-accent text-indigo-600 transition duration-150 ease-in-out"
                     />
                     <span className="ml-2 ">{label}</span>
                   </label>
@@ -280,7 +280,7 @@ export default function AiSetting() {
               })}
               defaultValue={aiConfig?.additionalInstruction}
               type="text"
-              className="input h-8 input-ghost text-sm input-secondary border-solid focus:border-dotted w-full"
+              className="input h-8 input-ghost text-sm input-accent border-solid focus:border-dotted w-full"
               placeholder="Enter additional instruction"
             />
           </div>
@@ -299,7 +299,7 @@ export default function AiSetting() {
             </p>
             <button
               disabled={isSubmitting}
-              className="btn modal-action btn-accent text-md shadow-sm tracking-wide font-semibold focus:accent-accent-focus  hover:shadow-accent border border-secondary btn-lg "
+              className="btn modal-action btn-accent text-md shadow-sm tracking-wide font-semibold focus:accent-accent-focus  hover:shadow-accent border border-accent btn-lg "
             >
               Next
             </button>
