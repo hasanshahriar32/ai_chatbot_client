@@ -87,73 +87,141 @@ const AiQuery2 = () => {
         uid: user?.uid,
       };
       setMessageSearch([]);
-      fetch(
-        `https://hstu-aichat-server.onrender.com/generate/prompt/${localStorage.getItem(
-          "user_id"
-        )}`,
-        {
-          method: "POST",
-          headers: {
-            "content-type": "application/json",
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-          body: JSON.stringify(promptConfig),
-        }
-      )
-        .then((res) => res.json())
-        .then((data) => {
-          setLoadingAi(false);
-          if (
-            Array.isArray(data) &&
-            data?.length > 0 &&
-            data[0]?.sessionId == localStorage.getItem("currentSessionid")
-          ) {
-            handleSearchSuggestion(data[1]?.message);
-            if (data[1]?.title && data[1]?.title?.length > 1) {
-              setAiConfig((prevConfig) => ({
-                ...prevConfig,
-                sessionTitle: data[1]?.title,
-              }));
-            }
-            setMessages((prevMessages) => {
-              // Check if any message with the same serial number already exists
-              const existingMessageIndex = prevMessages.findIndex(
-                (message) => message.serial === data[0].serial
-              );
-
-              if (existingMessageIndex !== -1) {
-                // Remove the existing message with the same serial number
-                const updatedMessages = prevMessages.filter(
-                  (_, index) => index !== existingMessageIndex
+      if (aiConfig?.subjectSelection === "Admission") {
+        fetch(
+          `https://hstu-aichat-server.vercel.app/generate/finetune/${localStorage.getItem(
+            "user_id"
+          )}`,
+          {
+            method: "POST",
+            headers: {
+              "content-type": "application/json",
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+            body: JSON.stringify(promptConfig),
+          }
+        )
+          .then((res) => res.json())
+          .then((data) => {
+            setLoadingAi(false);
+            if (
+              Array.isArray(data) &&
+              data?.length > 0 &&
+              data[0]?.sessionId == localStorage.getItem("currentSessionid")
+            ) {
+              // handleSearchSuggestion(data[1]?.message);
+              if (data[1]?.title && data[1]?.title?.length > 1) {
+                setAiConfig((prevConfig) => ({
+                  ...prevConfig,
+                  sessionTitle: data[1]?.title,
+                }));
+              }
+              setMessages((prevMessages) => {
+                // Check if any message with the same serial number already exists
+                const existingMessageIndex = prevMessages.findIndex(
+                  (message) => message.serial === data[0].serial
                 );
 
-                // Append the new data to the updated messages
-                return [...updatedMessages, ...data];
-              } else {
-                // Append the new data to the previous messages
-                return [...prevMessages, ...data];
-              }
-            });
-          } else {
-            // Handle empty data or non-iterable response
-            toast.error("No session available, no response from AI", {
-              // position: "bottom-center",
-              autoClose: 5000,
-              hideProgressBar: false,
-              closeOnClick: true,
-              pauseOnHover: true,
-              draggable: true,
-              progress: undefined,
-              theme: "dark",
-            });
-            // You can choose to display an error message or handle it as needed.
-          }
-        })
-        // eslint-disable-next-line no-unused-vars
-        .catch((err) => {
-          setLoadingAi(false);
-        });
+                if (existingMessageIndex !== -1) {
+                  // Remove the existing message with the same serial number
+                  const updatedMessages = prevMessages.filter(
+                    (_, index) => index !== existingMessageIndex
+                  );
 
+                  // Append the new data to the updated messages
+                  return [...updatedMessages, ...data];
+                } else {
+                  // Append the new data to the previous messages
+                  return [...prevMessages, ...data];
+                }
+              });
+            } else {
+              // Handle empty data or non-iterable response
+              toast.error("No session available, no response from AI", {
+                // position: "bottom-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+              });
+              // You can choose to display an error message or handle it as needed.
+            }
+          })
+          // eslint-disable-next-line no-unused-vars
+          .catch((err) => {
+            setLoadingAi(false);
+          });
+      } else {
+        fetch(
+          `https://hstu-aichat-server.onrender.com/generate/prompt/${localStorage.getItem(
+            "user_id"
+          )}`,
+          {
+            method: "POST",
+            headers: {
+              "content-type": "application/json",
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+            body: JSON.stringify(promptConfig),
+          }
+        )
+          .then((res) => res.json())
+          .then((data) => {
+            setLoadingAi(false);
+            if (
+              Array.isArray(data) &&
+              data?.length > 0 &&
+              data[0]?.sessionId == localStorage.getItem("currentSessionid")
+            ) {
+              handleSearchSuggestion(data[1]?.message);
+              if (data[1]?.title && data[1]?.title?.length > 1) {
+                setAiConfig((prevConfig) => ({
+                  ...prevConfig,
+                  sessionTitle: data[1]?.title,
+                }));
+              }
+              setMessages((prevMessages) => {
+                // Check if any message with the same serial number already exists
+                const existingMessageIndex = prevMessages.findIndex(
+                  (message) => message.serial === data[0].serial
+                );
+
+                if (existingMessageIndex !== -1) {
+                  // Remove the existing message with the same serial number
+                  const updatedMessages = prevMessages.filter(
+                    (_, index) => index !== existingMessageIndex
+                  );
+
+                  // Append the new data to the updated messages
+                  return [...updatedMessages, ...data];
+                } else {
+                  // Append the new data to the previous messages
+                  return [...prevMessages, ...data];
+                }
+              });
+            } else {
+              // Handle empty data or non-iterable response
+              toast.error("No session available, no response from AI", {
+                // position: "bottom-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+              });
+              // You can choose to display an error message or handle it as needed.
+            }
+          })
+          // eslint-disable-next-line no-unused-vars
+          .catch((err) => {
+            setLoadingAi(false);
+          });
+      }
       input.value = "";
       scrollToBottom();
     }
