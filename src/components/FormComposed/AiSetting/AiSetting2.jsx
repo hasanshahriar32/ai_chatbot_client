@@ -19,14 +19,14 @@ export default function AiSetting2() {
     reset,
   } = useForm({
     defaultValues: {
-      subjectSelection: "fineTune",
+      subjectSelection: "Admission",
       assistanceLevel: aiConfig?.assistanceLevel || "",
       additionalInstruction: aiConfig?.additionalInstruction || "",
     },
   });
   useEffect(() => {
     // Set default values for subjectSelection and assistanceLevel
-    const defaultSub = aiConfig?.subjectSelection || "";
+    const defaultSub = "Admission";
     const defaultAssist = aiConfig?.assistanceLevel || "";
     const defaultAdditional = aiConfig?.additionalInstruction || "";
 
@@ -164,15 +164,15 @@ export default function AiSetting2() {
               <select
                 {...register("subjectSelection", {
                   //   required: "Please select an item.",
-                  defaultValue: "fineTune",
+                  defaultValue: "Admission",
                 })}
                 {...register("subjectSelection", {})}
-                value="fineTune"
+                value="Admission"
                 aria-invalid={errors["subjectSelection"] ? "true" : "false"}
                 defaultValue={aiConfig?.subjectSelection}
                 className="form-select chatScroll select text-sm h-8 w-full select-ghost  border-info text-gray-700"
               >
-                <option value="fineTune" selected>
+                <option value="Admission" selected>
                   Fine Tune
                 </option>
               </select>

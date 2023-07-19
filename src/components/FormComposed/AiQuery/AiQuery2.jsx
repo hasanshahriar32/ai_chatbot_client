@@ -11,6 +11,7 @@ import { AuthContext } from "../../../Contexts/UserContext/UserContext";
 import DrawerToggle from "../../../layout/Dashboard/DrawerToggle";
 import AiSetting from "../AiSetting/AiSetting";
 import "./aiQuery.css";
+import AiSetting2 from "../AiSetting/AiSetting2";
 
 const AiQuery2 = () => {
   const { modalState, setAiConfig, aiConfig } = useContext(AiContext);
@@ -578,7 +579,11 @@ const AiQuery2 = () => {
           >
             ✕
           </button>
-          <AiSetting></AiSetting>
+          {aiConfig?.subjectSelection === "Admission" ? (
+            <AiSetting2></AiSetting2>
+          ) : (
+            <AiSetting></AiSetting>
+          )}
         </div>
       </div>
 
