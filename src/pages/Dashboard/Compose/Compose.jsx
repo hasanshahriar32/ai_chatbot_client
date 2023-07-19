@@ -14,14 +14,18 @@ const Compose = () => {
       {aiConfig?.length === 0 ? (
         <div className="min-h-[90vh]">
           <nav aria-label="Tabs" className="mx-[5%] mt-2 md:mt-7">
-            <ul className="flex border-b border-dashed border-base-300 text-center">
+            <ul
+              className={`flex  text-center ${
+                aiConfigState === true ? `border-accent-focus` : `border-info`
+              }}`}
+            >
               <li className="flex-1">
                 <Link
                   onClick={() => setAiConfigState(true)}
                   className={`${
                     aiConfigState
-                      ? `block bg-gray-100 p-4 text-sm font-medium text-gray-500 ring-1 ring-inset ring-accent-focus text-accent-focus bg-base-100 hover:text-gray-700 hover:bg-gray-100 focus:outline-none focus:text-gray-700 focus:bg-gray-100`
-                      : `block p-4 text-sm font-medium text-gray-500  hover:text-white/80 text-grey-200 hover:bg-gray-100 focus:outline-none focus:text-gray-700 focus:bg-gray-100`
+                      ? `block bg-gray-100  p-4 text-sm font-medium text-gray-500 border-t border-r border-l text-accent-focus bg-base-100 hover:text-gray-700 hover:bg-gray-100 focus:outline-none focus:text-gray-700 focus:bg-gray-100`
+                      : `block p-4 text-sm border-b font-medium text-gray-500 border-info hover:text-white/80 text-grey-200 hover:bg-gray-100 focus:outline-none focus:text-gray-700 focus:bg-gray-100`
                   }`}
                   href=""
                 >
@@ -35,8 +39,8 @@ const Compose = () => {
                   onClick={() => setAiConfigState(false)}
                   className={`${
                     !aiConfigState
-                      ? `block bg-gray-100 p-4 text-sm font-medium text-gray-500 ring-1 ring-inset ring-info text-info bg-base-100 hover:text-gray-700 hover:bg-gray-100 focus:outline-none focus:text-gray-700 focus:bg-gray-100`
-                      : `block p-4 text-sm font-medium text-gray-500  hover:text-white/80 text-grey-200 hover:bg-gray-100 focus:outline-none focus:text-gray-700 focus:bg-gray-100`
+                      ? `block bg-gray-100 p-4 text-sm font-medium text-gray-500 border-t border-r border-l text-info bg-base-100 hover:text-gray-700 hover:bg-gray-100 focus:outline-none focus:text-gray-700 focus:bg-gray-100`
+                      : `block p-4 text-sm font-medium border-b text-gray-500 border-accent-focus hover:text-white/80 text-grey-200 hover:bg-gray-100 focus:outline-none focus:text-gray-700 focus:bg-gray-100`
                   }`}
                   href=""
                 >
