@@ -12,7 +12,9 @@ export const StreamlinedExperience = () => {
   const textX = useTransform(scrollYProgress, [0.1, 0.7], ["100%", "-100%"]);
   const opacitySection = useTransform(scrollYProgress, [0.1, 0.5], [0, 1]);
   const scale = useTransform(scrollYProgress, [0.1, 0.7], [1, 0.7]);
-
+  const position = useTransform(scrollYProgress, (pos) =>
+    pos >= 0.1 && pos <= 0.9 ? "fixed" : "relative"
+  );
   const opacityBorder = useTransform(
     scrollYProgress,
     [0.7, 0.71, 0.72],
@@ -24,7 +26,7 @@ export const StreamlinedExperience = () => {
     [0, 0, 1, 1, 0]
   );
 
-  const finalTextScale = useTransform(scrollYProgress, [0.8, 0.9], [1, 0.7]);
+  const finalTextScale = useTransform(scrollYProgress, [0.8, 0.9], [1, 0.5]);
 
   return (
     <motion.section
@@ -34,13 +36,16 @@ export const StreamlinedExperience = () => {
         "--opacity-border": opacityBorder,
       })}
       ref={targetRef}
-      className="mt-[50vh] flex h-[500vh] items-start justify-start"
+      className="mt-[50vh] flex h-[400vh] items-start justify-start"
     >
-      <div className="fixed top-1/2 left-1/2 min-h-[50rem] min-w-[50rem] -translate-x-1/2 -translate-y-1/2 whitespace-nowrap before:absolute before:inset-0 before:scale-[var(--scale)] before:border-[2.5rem] before:border-[#CEF144] before:opacity-[var(--opacity-border)]">
+      <motion.div
+        style={{ position }}
+        className="top-1/2 left-1/2 min-h-[50rem] min-w-[50rem] -translate-x-1/2 -translate-y-1/2 whitespace-nowrap before:absolute before:inset-0 before:scale-[var(--scale)] before:border-[2.5rem] before:border-[#CEF144] before:opacity-[var(--opacity-border)]"
+      >
         <motion.p
           aria-hidden
           style={{ x: textX, y: "-50%" }}
-          className="whitepspace-nowrap min-w-screen absolute top-1/2 left-[calc(-50vw+25rem)] text-[23rem] text-heading"
+          className="whitepspace-nowrap min-w-screen absolute top-1/2 left-[calc(-50vw+25rem)] text-[20rem] text-heading"
         >
           Ai Powered
         </motion.p>
@@ -67,7 +72,7 @@ export const StreamlinedExperience = () => {
         </motion.p>
         <span className="absolute left-[calc(50%*var(--scale)+50%)] top-0 z-10 h-full w-[50vw] origin-left scale-[var(--scale)]  bg-glass-gradient backdrop-blur-lg opacity-[var(--opacity-border)]" />
         <span className="absolute left-[calc(50%*var(--scale)+50%-(2.5rem*var(--scale)))] top-0 z-[12] h-full w-[50vw] origin-left scale-[var(--scale)] border-l-[2.5rem] border-[#CEF144] opacity-[var(--opacity-border)]" />
-      </div>
+      </motion.div>
     </motion.section>
   );
 };
