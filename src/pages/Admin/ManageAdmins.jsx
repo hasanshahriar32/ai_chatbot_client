@@ -20,7 +20,7 @@ const ManageAdmins = () => {
           },
         };
         const { data } = await axios.get(
-          `https://hstu-aichat-server.vercel.app/admin/all`,
+          `https://ai-chatbot-server.vercel.app/admin/all`,
 
           config
         );
@@ -43,7 +43,7 @@ const ManageAdmins = () => {
           },
         };
         const { data } = await axios.get(
-          `https://hstu-aichat-server.vercel.app/user/user?search=${search}`,
+          `https://ai-chatbot-server.vercel.app/user/user?search=${search}`,
 
           config
         );
@@ -85,7 +85,7 @@ const ManageAdmins = () => {
         },
       };
       const response = await axios.post(
-        "https://hstu-aichat-server.vercel.app/admin",
+        "https://ai-chatbot-server.vercel.app/admin",
         data,
         config
       );
@@ -117,7 +117,7 @@ const ManageAdmins = () => {
   //         Authorization: `Bearer ${user}`,
   //       },
   //     };
-  //     const url = `https://hstu-aichat-server.vercel.app/admin/${adminToRemove?._id}`;
+  //     const url = `https://ai-chatbot-server.vercel.app/admin/${adminToRemove?._id}`;
   //     // console.log(url);
   //     const response = await axios.delete(url, data, config);
   //     console.log(response.data);
@@ -146,7 +146,7 @@ const ManageAdmins = () => {
 
     try {
       const response = await axios.delete(
-        `https://hstu-aichat-server.vercel.app/admin/${adminToRemove._id}`,
+        `https://ai-chatbot-server.vercel.app/admin/${adminToRemove._id}`,
         { data, headers }
       );
 

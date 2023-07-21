@@ -14,7 +14,7 @@ const ManageGigs = () => {
 
   const getPackage = async () => {
     const { data: dataGet } = await axios.get(
-      `https://hstu-aichat-server.vercel.app/package/all`
+      `https://ai-chatbot-server.vercel.app/package/all`
     );
     setPricingData(dataGet);
   };
@@ -72,7 +72,7 @@ const ManageGigs = () => {
         },
       };
       const { data: dataGet } = await axios.patch(
-        `https://hstu-aichat-server.vercel.app/ai/${localStorage.getItem(
+        `https://ai-chatbot-server.vercel.app/ai/${localStorage.getItem(
           "user_id"
         )}`,
         {
@@ -128,7 +128,7 @@ const ManageGigs = () => {
 
   const getModelConfig = async () => {
     const { data: dataGet } = await axios.get(
-      `https://hstu-aichat-server.vercel.app/ai/all`
+      `https://ai-chatbot-server.vercel.app/ai/all`
     );
     setModelPriceConfig(dataGet[0]);
   };

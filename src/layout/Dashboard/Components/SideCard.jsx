@@ -21,7 +21,7 @@ const SideCard = ({ sesstionData, setRefetch }) => {
         },
       };
       const { data: dataGet } = await axios.post(
-        "https://hstu-aichat-server.vercel.app/session/single",
+        "https://ai-chatbot-server.vercel.app/session/single",
         {
           sessionId: id,
         },
@@ -67,7 +67,7 @@ const SideCard = ({ sesstionData, setRefetch }) => {
 
     try {
       const response = await axios.delete(
-        `https://hstu-aichat-server.vercel.app/session/${localStorage.getItem(
+        `https://ai-chatbot-server.vercel.app/session/${localStorage.getItem(
           "user_id"
         )}`,
         { data },

@@ -89,7 +89,7 @@ export default function AiSetting() {
           },
         };
         const { data: dataGet } = await axios.post(
-          "https://hstu-aichat-server.vercel.app/session",
+          "https://ai-chatbot-server.vercel.app/session",
           {
             sessionTitle: data?.additionalInstruction || "",
             subjectSelection: data?.subjectSelection,

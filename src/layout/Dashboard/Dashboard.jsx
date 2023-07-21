@@ -63,7 +63,7 @@ const Dashboard = () => {
         },
       };
       const { data: dataGet } = await axios.post(
-        "https://hstu-aichat-server.vercel.app/session/all",
+        "https://ai-chatbot-server.vercel.app/session/all",
         {
           page: 1,
           limit: 50,
@@ -98,7 +98,7 @@ const Dashboard = () => {
         },
       };
       const { data: dataGet } = await axios.post(
-        "https://hstu-aichat-server.vercel.app/session/favorite",
+        "https://ai-chatbot-server.vercel.app/session/favorite",
         {
           page: 1,
           limit: 50,

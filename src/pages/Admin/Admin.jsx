@@ -14,7 +14,7 @@ const Admin = () => {
           },
         };
         const { data } = await axios.get(
-          `https://hstu-aichat-server.vercel.app/admin/${localStorage.getItem(
+          `https://ai-chatbot-server.vercel.app/admin/${localStorage.getItem(
             "user_id"
           )}`,
 
@@ -48,7 +48,7 @@ const Admin = () => {
     // console.log(data);
     try {
       const response = await axios.patch(
-        `https://hstu-aichat-server.vercel.app/admin/${localStorage.getItem(
+        `https://ai-chatbot-server.vercel.app/admin/${localStorage.getItem(
           "user_id"
         )}`,
         data,

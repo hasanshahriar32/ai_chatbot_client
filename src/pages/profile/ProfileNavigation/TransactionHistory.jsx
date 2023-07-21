@@ -17,7 +17,7 @@ const TransactionHistory = () => {
   const [pricingData, setPricingData] = useState([]);
   const getPackage = async () => {
     const { data: dataGet } = await axios.get(
-      `https://hstu-aichat-server.vercel.app/package/all`
+      `https://ai-chatbot-server.vercel.app/package/all`
     );
     setPricingData(dataGet);
   };
@@ -37,7 +37,7 @@ const TransactionHistory = () => {
   useEffect(() => {
     setLoading(true);
     fetch(
-      `https://hstu-aichat-server.vercel.app/transaction/all/${localStorage.getItem(
+      `https://ai-chatbot-server.vercel.app/transaction/all/${localStorage.getItem(
         "user_id"
       )}`,
       {
