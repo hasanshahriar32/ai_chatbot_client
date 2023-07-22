@@ -8,6 +8,9 @@ import Showcase from "../../components/Showcase/Showcase";
 import { Container } from "../../components/features/container";
 import { StarsIllustration } from "../../components/features/stars";
 import { StreamlinedExperience } from "../../components/StreamlinedExperience/StreamlinedExperience";
+import { Collaboration } from "../../components/StreamlinedExperience/collaboration";
+// import { SamePage } from "../../components/StreamlinedExperience/same-page";
+// import { Features } from "../../components/StreamlinedExperience/features";
 
 const Home = () => {
   return (
@@ -32,6 +35,12 @@ const Home = () => {
         </div>
         <div className="container mx-auto ">
           <Price />
+
+          <div className="my-10">
+            <Collaboration />
+            {/* <SamePage /> */}
+            {/* <Features /> */}
+          </div>
           <div className="my-10">
             <Faq />
           </div>
