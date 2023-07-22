@@ -91,7 +91,10 @@ export const Collaboration = () => {
   );
 
   return (
-    <section ref={targetRef} className="relative z-10 mt-60 h-[300vh]">
+    <section
+      ref={targetRef}
+      className="scroll-smooth relative z-10 mt-60 h-[300vh]"
+    >
       <div ref={extendedRef} className="mb-[-120vh] h-[420vh] w-full">
         <motion.div style={{ position }} className="sticky top-[10vh]">
           <div className="flex justify-center">
@@ -99,7 +102,7 @@ export const Collaboration = () => {
               <motion.img
                 style={{ opacity, position: positions }}
                 src="https://i.ibb.co/N9YgJjq/Screenshot-2023-07-22-130559.png"
-                className="h-auto max-h-none w-[70vw] "
+                className={`h-auto max-h-none w-[70vw] `}
               />
               <motion.div
                 style={{ opacity: avatarGroupOpacity, x: avatarGroupX }}
@@ -140,7 +143,7 @@ export const Collaboration = () => {
                   // animate={{}}
                   animate={inView ? { opacity: 1 } : "rotate: 360, scale: 1"}
                   className="text container"
-                  transition={{ duration: 1, delay: index * 0.1 }}
+                  transition={{ duration: 1.5, delay: index * 0.15 }}
                 >
                   {letter}
                 </motion.span>
