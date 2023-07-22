@@ -15,6 +15,9 @@ export const Collaboration = () => {
   const position = useTransform(scrollYProgress, (pos) =>
     pos >= 0.3 && pos <= 1 ? "fixed" : "relative"
   );
+  const positions = useTransform(scrollYProgress, (pos) =>
+    pos <= 9 ? "relative" : "hidden"
+  );
   const scale = useTransform(
     scrollYProgressIncludingOverlap,
     [0.1, 0.4, 0.75, 1],
@@ -75,29 +78,29 @@ export const Collaboration = () => {
           <div className="flex justify-center">
             <motion.div style={{ scale, x, y }} className="origin-top">
               <motion.img
-                style={{ opacity }}
+                style={{ opacity, position: positions }}
                 src="https://i.ibb.co/N9YgJjq/Screenshot-2023-07-22-130559.png"
-                className="h-auto max-h-none w-[70vw]"
+                className="h-auto max-h-none w-[70vw] "
               />
               <motion.div
                 style={{ opacity: avatarGroupOpacity, x: avatarGroupX }}
                 className="absolute right-[10%] top-[1.5%] flex gap-2"
               >
-                {/* <motion.img
+                <motion.img
                   style={{ scale: avatarOneScale }}
                   className="h-[1.5vw] w-[1.5vw] rounded-full border border-[#4ca] object-cover"
-                  src="https://unsplash.com/photos/_H6wpor9mjs/download?force=true&w=128&h=128"
-                /> */}
+                  src="https://sjinnovation.com/sites/default/files/inline-images/pic%201_39.png"
+                />
                 <motion.img
                   style={{ scale: avatarTwoScale, opacity: avatarTwoOpacity }}
                   className="h-[1.5vw] w-[1.5vw] rounded-full border border-[#c82] object-cover"
                   src="https://www.cambridgewireless.co.uk/media/uploads/files/AI-icon.png"
                 />
-                {/* <motion.img
+                <motion.img
                   style={{ scale: avatarThreeScale }}
                   className="h-[1.5vw] w-[1.5vw] rounded-full border border-[#f0f] object-cover"
-                  src="https://unsplash.com/photos/7YVZYZeITc8/download?force=true&w=128&h=128"
-                /> */}
+                  src="https://lh3.googleusercontent.com/a/AAcHTterxY8bMqIASh1zmo6YZQ0kn3y1dH8SzRxHLyot_g=s96-c"
+                />
               </motion.div>
             </motion.div>
           </div>

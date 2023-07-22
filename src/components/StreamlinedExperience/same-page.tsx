@@ -142,12 +142,12 @@ export const SamePage = () => {
     ["4rem", "0rem"]
   );
 
-  const position = useTransform(scrollYProgress, (pos) =>
+  const newPosition = useTransform(scrollYProgress, (pos) =>
     pos >= 0.1 && pos <= 0.9 ? "fixed" : "relative"
   );
-  // const position = useTransform(scrollYProgress, (pos) =>
-  //   pos >= 1 ? "relative" : "fixed"
-  // );
+  const position = useTransform(scrollYProgress, (pos) =>
+    pos >= 1 ? "relative" : "fixed"
+  );
   const avatarOpacity = useTransform(scrollYProgress, (pos) =>
     pos >= animationOrder.fadeInEnd ? 1 : 0
   );
@@ -172,7 +172,7 @@ export const SamePage = () => {
     <section ref={targetRef}>
       <div className=" h-[800vh]">
         <motion.section
-          style={{ position }}
+          style={{ position: newPosition }}
           className=" top-1/2 flex origin-center -translate-y-1/2 justify-center"
         >
           <motion.div
