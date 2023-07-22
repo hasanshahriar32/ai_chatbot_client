@@ -65,13 +65,13 @@ export const Features = () => {
         <motion.div style={{ x, scale }} className="relative h-full">
           <motion.figure style={{ opacity }} className="h-full">
             <img
-              src="https://i.ibb.co/f90Z8wt/356123136-1725567137893955-649602758100029816-n.jpg"
+              src="https://i.ibb.co/mSYhp53/356072737-1725566964560639-6041589234748836019-n.jpg"
               className="h-full w-auto object-cover"
             />
           </motion.figure>
           <motion.figure style={{ opacity: text2Opacity }}>
             <img
-              src="https://i.ibb.co/f90Z8wt/356123136-1725567137893955-649602758100029816-n.jpg"
+              src="https://i.ibb.co/2dPTPFP/356226858-1725566261227376-3696734891046274627-n.jpg"
               className="absolute inset-0 h-full w-auto object-cover"
             />
           </motion.figure>
@@ -89,10 +89,10 @@ export const Features = () => {
           })}
           className="translate-y-centered-offset absolute top-1/2 left-0"
         >
-          <span className="text-primary">Preconfigured environments</span>
+          <span className="text-primary">Academic Assistance</span>
           <br />
-          We detect your environment so you don't need to fiddle with
-          configuration files.
+          Neuronex AI is trained to help the HSTU students at their academic
+          lessons.
         </motion.p>
         <motion.p
           style={stylesWithCssVar({
@@ -101,9 +101,10 @@ export const Features = () => {
           })}
           className="translate-y-centered-offset absolute top-1/2 left-0"
         >
-          <span className="text-primary">Command Pallete</span>
+          <span className="text-primary">Admission Assistance</span>
           <br />
-          Access and complete any action in seconds with the command palette.
+          We are developing this AI to help the newcomers and admission
+          candidates at different perspective.
         </motion.p>
         <motion.p
           style={stylesWithCssVar({
@@ -112,7 +113,7 @@ export const Features = () => {
           })}
           className="translate-y-centered-offset absolute top-1/2 left-0"
         >
-          <span className="text-primary">Devtools</span>
+          <span className="text-primary">Information Gathering</span>
           <br />
           We've bundled useful tools to help you get your work done faster and
           more efficiently.
