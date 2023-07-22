@@ -40,7 +40,10 @@ const Home = () => {
             {/* <SamePage /> */}
             <StreamlinedExperience />
           </div>
-          <Collaboration />
+          <div className="hidden md:block">
+            {/* <SamePage /> */}
+            <Collaboration />
+          </div>
         </div>
         <Features />
         <div className="relative z-10 w-full overflow-x-clip">
