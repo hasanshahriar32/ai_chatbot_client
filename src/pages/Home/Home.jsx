@@ -40,7 +40,7 @@ const Home = () => {
             {/* <SamePage /> */}
             <StreamlinedExperience />
           </div>
-          <div className="hidden md:block">
+          <div className="hidden -z-10 md:block">
             {/* <SamePage /> */}
             <Collaboration />
           </div>
