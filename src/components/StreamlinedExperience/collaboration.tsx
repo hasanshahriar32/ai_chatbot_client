@@ -88,7 +88,7 @@ export const Collaboration = () => {
               >
                 <motion.img
                   style={{ scale: avatarOneScale }}
-                  className="h-[1.5vw] w-[1.5vw] rounded-full border border-[#4ca] object-cover"
+                  className="h-[1.5vw] w-[1.5vw] rounded-full border border-[#a422db] object-cover"
                   src="https://sjinnovation.com/sites/default/files/inline-images/pic%201_39.png"
                 />
                 <motion.img
@@ -98,12 +98,20 @@ export const Collaboration = () => {
                 />
                 <motion.img
                   style={{ scale: avatarThreeScale }}
-                  className="h-[1.5vw] w-[1.5vw] rounded-full border border-[#f0f] object-cover"
-                  src="https://lh3.googleusercontent.com/a/AAcHTterxY8bMqIASh1zmo6YZQ0kn3y1dH8SzRxHLyot_g=s96-c"
+                  className="h-[1.5vw] w-[1.5vw] rounded-full border border-secondary object-cover"
+                  src="https://hstu.ac.bd/img/hstu_logo_.png"
                 />
               </motion.div>
             </motion.div>
           </div>
+          <motion.h2
+            className="absolute font-sans scroll-smooth flex items-center flex-col text-6xl lg:text-8xl text-success top-2 right-1 h-screen justify-center"
+            style={{ opacity: avatarThreeScale }}
+          >
+            <motion.span>Three</motion.span>
+            <motion.span>in</motion.span>
+            <motion.span>One</motion.span>
+          </motion.h2>
         </motion.div>
       </div>
     </section>
