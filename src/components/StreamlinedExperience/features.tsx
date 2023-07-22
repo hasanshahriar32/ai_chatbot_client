@@ -51,7 +51,7 @@ export const Features = () => {
   );
 
   const position = useTransform(scrollYProgress, (pos) =>
-    pos >= 0.1 && pos <= 0.9 ? "fixed" : "relative"
+    pos >= 0.1 && pos <= 0.999999999 ? "fixed" : "relative"
   );
   return (
     <section
