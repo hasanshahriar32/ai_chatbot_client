@@ -1,7 +1,7 @@
 import { BranchIcon } from "./icons/branch";
 import { stylesWithCssVar } from "./motion";
 import { useScroll, useTransform, motion } from "framer-motion";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import React from "react";
 const animationOrder = {
   initial: 0,
@@ -142,20 +142,39 @@ export const SamePage = () => {
     ["4rem", "0rem"]
   );
 
-  // const position = useTransform(scrollYProgress, (pos) =>
-  //   pos >= 0.1 && pos <= 0.9 ? "fixed" : "relative"
-  // );
   const position = useTransform(scrollYProgress, (pos) =>
-    pos >= 1 ? "relative" : "fixed"
+    pos >= 0.1 && pos <= 0.9 ? "fixed" : "relative"
   );
+  // const position = useTransform(scrollYProgress, (pos) =>
+  //   pos >= 1 ? "relative" : "fixed"
+  // );
   const avatarOpacity = useTransform(scrollYProgress, (pos) =>
     pos >= animationOrder.fadeInEnd ? 1 : 0
   );
 
+  // const { scrollYProgress } = useViewportScroll();
+  const [sectionStyle, setSectionStyle] = useState("relative");
+
+  useEffect(() => {
+    const unsubscribe = scrollYProgress.onChange((value) => {
+      if (value >= 0.1 && value <= 0.9) {
+        setSectionStyle("fixed");
+      } else {
+        setSectionStyle("relative");
+      }
+    });
+
+    return () => {
+      unsubscribe();
+    };
+  }, [scrollYProgress]);
   return (
     <section ref={targetRef}>
-      <div className="relative h-[800vh]">
-        <div className="sticky top-1/2 flex origin-center -translate-y-1/2 justify-center">
+      <div className=" h-[800vh]">
+        <motion.section
+          style={{ position }}
+          className=" top-1/2 flex origin-center -translate-y-1/2 justify-center"
+        >
           <motion.div
             className="translate-x-centered-offset absolute left-1/2 top-1/2 flex w-[50vw] -translate-y-1/2 scale-[var(--scale)] flex-col items-center justify-center "
             style={stylesWithCssVar({
@@ -222,7 +241,7 @@ export const SamePage = () => {
             <br />
             Spin up a new branch for any sized project in seconds.
           </motion.p>
-        </div>
+        </motion.section>
         <motion.p
           style={stylesWithCssVar({
             opacity: paragraph1Opacity,

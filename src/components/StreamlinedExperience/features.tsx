@@ -50,26 +50,35 @@ export const Features = () => {
     ["30px", "0px", "-30px"]
   );
 
+  const position = useTransform(scrollYProgress, (pos) =>
+    pos >= 0.1 && pos <= 0.9 ? "fixed" : "relative"
+  );
   return (
     <section
       ref={targetRef}
       className="flex h-[500vh] flex-col items-center justify-start"
     >
-      <div className="sticky top-[16.7vh] h-[66.8vh] px-16 text-2xl leading-[1] text-white [&_p]:w-[45rem] [&_p]:max-w-[90%]">
+      <motion.div
+        style={{ position }}
+        className=" top-[16.7vh] h-[66.8vh] px-16 text-2xl leading-[1] text-white [&_p]:w-[45rem] [&_p]:max-w-[90%]"
+      >
         <motion.div style={{ x, scale }} className="relative h-full">
           <motion.figure style={{ opacity }} className="h-full">
-            <img src="/main-screen.svg" className="h-full w-auto" />
+            <img
+              src="https://i.ibb.co/f90Z8wt/356123136-1725567137893955-649602758100029816-n.jpg"
+              className="h-full w-auto object-cover"
+            />
           </motion.figure>
           <motion.figure style={{ opacity: text2Opacity }}>
             <img
-              src="/command-palette.svg"
-              className="absolute inset-0 h-full w-auto"
+              src="https://i.ibb.co/f90Z8wt/356123136-1725567137893955-649602758100029816-n.jpg"
+              className="absolute inset-0 h-full w-auto object-cover"
             />
           </motion.figure>
           <motion.figure style={{ opacity: text3Opacity }}>
             <img
-              src="/devtools.svg"
-              className="absolute inset-0 h-full w-auto"
+              src="https://i.ibb.co/f90Z8wt/356123136-1725567137893955-649602758100029816-n.jpg"
+              className="absolute inset-0 h-full w-auto object-cover"
             />
           </motion.figure>
         </motion.div>
@@ -108,7 +117,7 @@ export const Features = () => {
           We've bundled useful tools to help you get your work done faster and
           more efficiently.
         </motion.p>
-      </div>
+      </motion.div>
     </section>
   );
 };
