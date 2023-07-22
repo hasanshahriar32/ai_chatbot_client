@@ -28,9 +28,9 @@ const Contact = () => {
   };
   return (
     <div>
-      <div className="mb-[50px] mt-[130px] text-sm">
+      <div className="mb-[50px] mt-[130px] z-10 text-sm">
         <section className="mb-32">
-          <div className="relative h-[350px] overflow-hidden bg-cover bg-[50%] bg-no-repeat bg-[url('https://i.ibb.co/1ZRs8QR/Whats-App-Image-2023-07-06-at-00-12-27-1.jpg')] opacity-60"></div>
+          <div className="relative h-[350px] overflow-hidden bg-cover bg-[50%] bg-no-repeat bg-[url('https://i.ibb.co/nnGpkBp/356214158-1725566727893996-2053350839905822905-n.jpg')] opacity-60"></div>
           <div className="wrapper">
             <motion.div
               style={!isSafari && { scale }}
@@ -39,10 +39,13 @@ const Contact = () => {
               <div className="container px-6 md:px-12 mx-auto  ">
                 <div className="block rounded-lg bg-[#091329]/100  md:py-16  -mt-[100px] ">
                   <div className="flex flex-wrap ">
-                    <div className="mb-12 w-full shrink-0 grow-0 basis-auto md:px-3 lg:mb-0 lg:w-5/12 lg:px-6 ">
+                    <div
+                      style={{ zIndex: "1000 !important" }}
+                      className="mb-12 z-40 w-full shrink-0 grow-0 basis-auto md:px-3 lg:mb-0 lg:w-5/12 lg:px-6 "
+                    >
                       <form
                         ref={form}
-                        className="m-6 md:m-0"
+                        className="m-6 md:m-0 "
                         onSubmit={sendEmail}
                       >
                         <div
@@ -137,11 +140,11 @@ const Contact = () => {
                                 Technical support
                               </p>
                               <a
-                                href="https://sjinnovation.com/"
+                                href="https://paradox-bd.com/"
                                 target="blank"
                                 className="text-neutral-500 dark:text-neutral-200"
                               >
-                                www.sjinnovation.com
+                                www.paradox-bd.com
                               </a>
                             </div>
                           </div>
@@ -171,12 +174,12 @@ const Contact = () => {
                                 Featured Projects
                               </p>
                               <a
-                                href="https://sjinnovation.com/portfolio"
+                                href="https://paradox-bd.com/portfolio"
                                 target="_blank"
                                 rel="noreferrer"
                                 className="text-neutral-500 dark:text-neutral-200"
                               >
-                                www.sjinnovation.com/portfolio
+                                www.paradox-bd.com/portfolio
                               </a>
                             </div>
                           </div>
@@ -206,12 +209,12 @@ const Contact = () => {
                                 QA Automation
                               </p>
                               <a
-                                href="https://www.sjinnovation.com/qa-automation"
+                                href="https://www.paradox-bd.com/qa-automation"
                                 target="_blank"
                                 rel="noreferrer"
                                 className="text-neutral-500 dark:text-neutral-200"
                               >
-                                www.sjinnovation.com/qa-automation
+                                www.paradox-bd.com/qa-automation
                               </a>
                             </div>
                           </div>
@@ -241,12 +244,12 @@ const Contact = () => {
                                 Community Outreach
                               </p>
                               <a
-                                href="https://community.sjinnovation.com/"
+                                href="https://community.paradox-bd.com/"
                                 target="_blank"
                                 rel="noreferrer"
                                 className="text-neutral-500 dark:text-neutral-200"
                               >
-                                www.community.sjinnovation.com/
+                                www.community.paradox-bd.com/
                               </a>
                             </div>
                           </div>

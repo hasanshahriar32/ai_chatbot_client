@@ -37,19 +37,17 @@ const Home = () => {
           <Price />
 
           <div className="my-10">
-            <Collaboration />
             {/* <SamePage /> */}
-            <Features />
+            <StreamlinedExperience />
           </div>
-          <div className="my-10">
-            <Faq />
-          </div>
+          <Collaboration />
         </div>
+        <Features />
         <div className="relative z-10 w-full overflow-x-clip">
-          <StreamlinedExperience />
+          <Faq />
         </div>
-        <Contact />
       </div>
+      <Contact />
     </div>
   );
 };
