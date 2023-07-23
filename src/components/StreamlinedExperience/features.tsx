@@ -90,7 +90,7 @@ export const Features = () => {
           className="translate-y-centered-offset absolute top-1/2 left-0"
         >
           <span className="text-primary text-3xl lg:text-5xl mb-3">
-            Academic Assistance
+            1. Academic Assistance
           </span>
           <br />
           Neuronex AI is trained to help the HSTU students at their academic
@@ -104,7 +104,7 @@ export const Features = () => {
           className="translate-y-centered-offset absolute top-1/2 left-0"
         >
           <span className="text-primary text-3xl lg:text-5xl mb-3">
-            Admission Assistance
+            2. Admission Assistance
           </span>
           <br />
           We are developing this AI to help the newcomers and admission
@@ -118,7 +118,7 @@ export const Features = () => {
           className="translate-y-centered-offset absolute top-1/2 left-0"
         >
           <span className="text-primary text-3xl lg:text-5xl mb-3">
-            Information Gathering
+            3. Information Gathering
           </span>
           <br />
           We've bundled useful tools to help you get your work done faster and
