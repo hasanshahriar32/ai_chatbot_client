@@ -11,6 +11,7 @@ import { StreamlinedExperience } from "../../components/StreamlinedExperience/St
 import { Collaboration } from "../../components/StreamlinedExperience/collaboration";
 // import { SamePage } from "../../components/StreamlinedExperience/same-page";
 import { Features } from "../../components/StreamlinedExperience/features";
+import Chat from "../../components/Chat/Chat";
 
 const Home = () => {
   return (
@@ -51,6 +52,7 @@ const Home = () => {
         </div>
       </div>
       <Contact />
+      <Chat />
     </div>
   );
 };
