@@ -120,7 +120,7 @@ export const Collaboration = () => {
                 />
                 <motion.img
                   style={{ scale: avatarThreeScale }}
-                  className="h-[1.5vw] w-[1.5vw] rounded-full border border-secondary object-cover"
+                  className="h-[1.5vw] w-[1.5vw] rounded p-[1px] border border-secondary object-cover"
                   src="https://hstu.ac.bd/img/hstu_logo_.png"
                 />
               </motion.div>
