@@ -46,7 +46,7 @@ const FAQ = () => {
           //   initial={{ scale: 0 }}
           //   animate={{ rotate: 360, scale: 1 }}
           variants={!isSafari ? container : null}
-          initial={!isSafari ? { rotate: -20 } : "scale: 0"}
+          initial={!isSafari ? { rotate: -5 } : "scale: 1"}
           animate={inView ? "visible" : "rotate: 360, scale: 1"}
           transition={{
             type: "spring",
