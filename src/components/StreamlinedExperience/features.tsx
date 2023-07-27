@@ -66,19 +66,19 @@ export const Features = () => {
           <motion.figure style={{ opacity }} className="h-full">
             <img
               src="https://i.ibb.co/mSYhp53/356072737-1725566964560639-6041589234748836019-n.jpg"
-              className="h-full w-auto object-cover"
+              className="h-full w-auto object-cover opacity-40"
             />
           </motion.figure>
           <motion.figure style={{ opacity: text2Opacity }}>
             <img
               src="https://i.ibb.co/2dPTPFP/356226858-1725566261227376-3696734891046274627-n.jpg"
-              className="absolute inset-0 h-full w-auto object-cover"
+              className="absolute inset-0 h-full w-auto object-cover opacity-40"
             />
           </motion.figure>
           <motion.figure style={{ opacity: text3Opacity }}>
             <img
               src="https://i.ibb.co/f90Z8wt/356123136-1725567137893955-649602758100029816-n.jpg"
-              className="absolute inset-0 h-full w-auto object-cover"
+              className="absolute inset-0 h-full w-auto object-cover opacity-40"
             />
           </motion.figure>
         </motion.div>
