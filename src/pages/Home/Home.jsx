@@ -11,6 +11,7 @@ import { StreamlinedExperience } from "../../components/StreamlinedExperience/St
 import { Collaboration } from "../../components/StreamlinedExperience/collaboration";
 // import { SamePage } from "../../components/StreamlinedExperience/same-page";
 import { Features } from "../../components/StreamlinedExperience/features";
+import Developer from "../../components/Hero/Developer";
 
 const Home = () => {
   return (
@@ -46,6 +47,11 @@ const Home = () => {
           </div>
         </div>
         <Features />
+        <div className=" flex justify-center">
+          <div className="overflow-hidden relative bottom-15 mx-auto">
+            <Developer />
+          </div>
+        </div>
         <div className="relative z-10 w-full overflow-x-clip">
           <Faq />
         </div>
