@@ -3,6 +3,7 @@ import { useRef } from "react";
 import React from "react";
 import { isSafari } from "react-device-detect";
 import { useInView } from "react-intersection-observer";
+import { HeroTitle } from "../Hero/hero";
 export const Collaboration = () => {
   const targetRef = useRef<HTMLDivElement | null>(null);
   const extendedRef = useRef<HTMLDivElement | null>(null);
@@ -131,24 +132,26 @@ export const Collaboration = () => {
             className="absolute font-sans scroll-smooth flex items-center flex-col text-6xl lg:text-8xl text-success top-2 right-1 h-screen justify-center"
             style={{ opacity: avatarThreeScale }}
           >
-            <motion.div
-              initial={!isSafari ? { rotate: 0 } : "scale: 0"}
-              className="text container"
-            >
-              {text.split("").map((letter, index) => (
-                <motion.span
-                  variants={container}
-                  key={index}
-                  initial={{ opacity: 0 }}
-                  // animate={{}}
-                  animate={inView ? { opacity: 1 } : "rotate: 360, scale: 1"}
-                  className="text container"
-                  transition={{ duration: 1.5, delay: index * 0.15 }}
-                >
-                  {letter}
-                </motion.span>
-              ))}
-            </motion.div>
+            <HeroTitle className={undefined}>
+              <motion.div
+                initial={!isSafari ? { rotate: 0 } : "scale: 0"}
+                className="text container"
+              >
+                {text.split("").map((letter, index) => (
+                  <motion.span
+                    variants={container}
+                    key={index}
+                    initial={{ opacity: 0 }}
+                    // animate={{}}
+                    animate={inView ? { opacity: 1 } : "rotate: 360, scale: 1"}
+                    className="text container"
+                    transition={{ duration: 0.5, delay: index * 0.05 }}
+                  >
+                    {letter}
+                  </motion.span>
+                ))}
+              </motion.div>
+            </HeroTitle>
             {/* <motion.span>Three</motion.span>
             <motion.span>in</motion.span>
             <motion.span>One</motion.span> */}
