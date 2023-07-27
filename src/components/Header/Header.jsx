@@ -147,7 +147,7 @@ const Header = () => {
           onClick={() => setHamburgerMenuIsOpen((open) => !open)}
         >
           <span className="sr-only">Toggle menu</span>
-          <AiOutlineMenu />
+          <AiOutlineMenu className="text-lg" />
         </button>
       </Container>
     </header>
