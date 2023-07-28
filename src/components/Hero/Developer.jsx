@@ -1,39 +1,54 @@
 import { HeroTitle } from "./hero";
-import { RiExternalLinkLine } from "react-icons/ri";
+import { motion } from "framer-motion";
+
+import { useInView } from "react-intersection-observer";
 const Developer = () => {
+  const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      rotate: 0,
+      transition: {
+        delayChildren: 0,
+        duration: 1.5,
+        staggerChildren: 0.2,
+      },
+    },
+  };
   const handleClick = () => {
     console.log("clicked");
     //go to a link in a new window
     window.open("https://shahriarhasan.vercel.app", "_blank");
   };
+  const [ref, inView] = useInView({
+    triggerOnce: false, // Only trigger once when the component comes into view
+    threshold: 0.1, // Adjust the threshold value as per your needs
+  });
+  const text = "Query Further?";
   return (
     <div className="w-full m-auto justify-center">
       <button
         onClick={handleClick}
+        ref={ref}
         className="z-10  btn btn-ghost btn-link cursor-pointer"
       >
         <HeroTitle className=" text-center  hover:shadow-lg shadow translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
-          <span className="hidden lg:block">
-            Visit my Portfolio <RiExternalLinkLine />
+          <span className="">
+            {text.split("").map((letter, index) => (
+              <motion.span
+                variants={container}
+                key={index}
+                initial={{ opacity: 0 }}
+                // animate={{}}
+                animate={inView ? { opacity: 1 } : "rotate: 360, scale: 1"}
+                className="text container"
+                transition={{ duration: 0.4, delay: index * 0.04 }}
+              >
+                {letter}
+              </motion.span>
+            ))}
           </span>{" "}
-          <span className="block lg:hidden">
-            Portfolio <RiExternalLinkLine />
-            {/* add svg icon of redirect */}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 inline-block"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
-          </span>
         </HeroTitle>
       </button>
     </div>
