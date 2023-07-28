@@ -22,7 +22,7 @@ const Developer = () => {
     window.open("https://shahriarhasan.vercel.app", "_blank");
   };
   const [ref, inView] = useInView({
-    triggerOnce: false, // Only trigger once when the component comes into view
+    triggerOnce: true, // Only trigger once when the component comes into view
     threshold: 0.1, // Adjust the threshold value as per your needs
   });
   const text = "Query Further?";
