@@ -67,7 +67,7 @@ const CountdownTimer = ({ targetTime }) => {
 };
 
 // Set the custom target time here (10 AM, 30th July 2023)
-const targetTime = new Date("July 30, 2023 10:00:00").getTime();
+const targetTime = new Date("July 30, 2023 07:00:00").getTime();
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -75,3 +75,14 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <CountdownTimer targetTime={targetTime} />
   </React.StrictMode>
 );
+
+// import React from "react";
+// import ReactDOM from "react-dom/client";
+// import App from "./App.jsx";
+// import "./index.css";
+
+// ReactDOM.createRoot(document.getElementById("root")).render(
+//   <React.StrictMode>
+//     <App />
+//   </React.StrictMode>
+// );
