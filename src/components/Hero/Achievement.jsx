@@ -1,6 +1,11 @@
 const Achievement = () => {
   return (
     <div className=" flex justify-center flex-col-reverse items-center">
+      <div className="flex flex-col justify-center gap-2 m-[5%]">
+        <h1 className="text-5xl font-bold text-center mb-10">Certificates</h1>
+        <img src="https://i.ibb.co/yhYgXdp/Neuronex.jpg" alt="" />
+        <img src="https://i.ibb.co/nbs4WhP/Shahriar-Hasan.jpg" alt="" />
+      </div>
       <div className="my-10 z-10">
         <h1 className="text-5xl font-bold text-center md:text-left mb-10">
           Achievement
