@@ -25,7 +25,7 @@ const Developer = () => {
     triggerOnce: true, // Only trigger once when the component comes into view
     threshold: 0.1, // Adjust the threshold value as per your needs
   });
-  const text = "Query Further?";
+  const text = "Consult Further?";
   return (
     <div ref={ref} className="w-full  m-auto justify-center">
       <button
