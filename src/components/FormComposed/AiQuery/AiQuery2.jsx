@@ -89,7 +89,7 @@ const AiQuery2 = () => {
       setMessageSearch([]);
       if (aiConfig?.subjectSelection === "Admission") {
         fetch(
-          `https://ai-chatbot-server.vercel.app/generate/finetune/${localStorage.getItem(
+          `https://hstu-aichat-server.onrender.com/generate/finetune/${localStorage.getItem(
             "user_id"
           )}`,
           {
@@ -109,7 +109,7 @@ const AiQuery2 = () => {
               finetune: data.message,
             };
             fetch(
-              `https://ai-chatbot-server.vercel.app/generate/admission/${localStorage.getItem(
+              `https://hstu-aichat-server.onrender.com/generate/admission/${localStorage.getItem(
                 "user_id"
               )}`,
               {
