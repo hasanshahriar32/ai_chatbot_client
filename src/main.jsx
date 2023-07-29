@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import App from "./App.jsx";
@@ -51,9 +52,14 @@ const CountdownTimer = ({ targetTime }) => {
         fontSize: "2rem",
       }}
     >
-      <div className="z-50 text-4xl">
-        {hours > 0 && `Launching after ${hours} hours `}
+      <div
+        style={{ zIndex: "1000 !!important" }}
+        className="text-center z-20 text-4xl"
+      >
+        <p className="text-5xl">Launching after</p>
+        {hours > 0 && ` ${hours} hours `}
         {formatTime(minutes)}:{formatTime(seconds)}
+        <h1 className="text-2xl">Stay Tuned</h1>
       </div>
     </div>
   );
