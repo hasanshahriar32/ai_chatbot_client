@@ -50,6 +50,7 @@ const CountdownTimer = ({ targetTime }) => {
         background: "rgba(0, 0, 0, 0.8)",
         color: "#fff",
         fontSize: "2rem",
+        zIndex: "1000",
       }}
     >
       <div
