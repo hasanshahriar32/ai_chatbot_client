@@ -57,10 +57,17 @@ const CountdownTimer = ({ targetTime }) => {
         style={{ zIndex: "1000 !!important" }}
         className="text-center z-20 text-4xl"
       >
+        <div className="flex justify-center w-full">
+          <img
+            className="w-[200px] lg:w-[300px]"
+            src="https://media4.giphy.com/media/daUNvsWuU3s8WeLnq3/giphy.gif?cid=ecf05e474gem0hfbfj6wbxxgns76rcfy08ghlfx5miuraw00&ep=v1_stickers_search&rid=giphy.gif&ct=s"
+            alt=""
+          />
+        </div>
         <p className="text-5xl">Launching after</p>
         {hours > 0 && ` ${hours} hours `}
         {formatTime(minutes)}:{formatTime(seconds)}
-        <h1 className="text-2xl">Stay Tuned</h1>
+        <h1 className="text-2xl">Stay Tuned</h1>{" "}
       </div>
     </div>
   );
