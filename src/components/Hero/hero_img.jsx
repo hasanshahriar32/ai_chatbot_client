@@ -47,7 +47,7 @@ export const HeroImage = () => {
         inView && "before:animate-image-glow"
       )}
     >
-      <div ref={ref} className="border absolute  mt-[350px] left-4"></div>
+      <div ref={ref} className="border absolute  mt-[150px] left-4"></div>
       <div
         className={classNames(
           "relative rounded-lg border border-transparent-white bg-white bg-opacity-[0.01] bg-hero-gradient",
