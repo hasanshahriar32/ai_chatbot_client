@@ -42,7 +42,7 @@ const Developer = () => {
                 // animate={{}}
                 animate={inView ? { opacity: 1 } : "rotate: 360, scale: 1"}
                 className="text container"
-                transition={{ duration: 0.4, delay: index * 0.04 }}
+                transition={{ duration: 0.4, delay: index * 0.01 }}
               >
                 {letter}
               </motion.span>
