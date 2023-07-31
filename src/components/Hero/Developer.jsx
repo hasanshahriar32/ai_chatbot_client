@@ -27,8 +27,7 @@ const Developer = () => {
   });
   const text = "Consult Further?";
   return (
-    <div  className="w-full  m-auto justify-center">
-      <div className="relative bottom-[400px] " ref={ref}></div>
+    <div  className="w-full  m-auto justify-center" ref={ref}>
       <button
         onClick={handleClick}
         className="z-10  btn btn-ghost btn-link cursor-pointer"
