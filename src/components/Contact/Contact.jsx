@@ -38,7 +38,7 @@ const Contact = () => {
             >
               <div className="container px-6 md:px-12 mx-auto  ">
                 <div className="block rounded-lg bg-[#091329]/100  md:py-16  -mt-[100px] ">
-                  <div className="flex flex-wrap ">
+                  <div className="flex flex-wrap lg:flex-row-reverse flex-col">
                     <div
                       style={{ zIndex: "1000 !important" }}
                       className="mb-12 z-40 w-full shrink-0 grow-0 basis-auto md:px-3 lg:mb-0 lg:w-5/12 lg:px-6 "
