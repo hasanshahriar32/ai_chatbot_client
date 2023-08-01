@@ -39,7 +39,7 @@ const Chat = () => {
             }(document, 'script', 'facebook-jssdk'));
           `}
         </script>
-        <script>
+{/*         <script>
           {`
            window.chatbaseConfig = {
     chatbotId: "IhPHkApTGMjUvda-GS9Kk",
@@ -51,7 +51,7 @@ const Chat = () => {
   id="IhPHkApTGMjUvda-GS9Kk"
   defer>
          
-</script>
+</script> */}
       </Helmet>
     </section>
   );
