@@ -39,6 +39,18 @@ const Chat = () => {
             }(document, 'script', 'facebook-jssdk'));
           `}
         </script>
+        <script>
+          {`
+           window.chatbaseConfig = {
+    chatbotId: "IhPHkApTGMjUvda-GS9Kk",
+  } `}
+</script>
+<script
+  src="https://www.chatbase.co/embed.min.js"
+  id="IhPHkApTGMjUvda-GS9Kk"
+  defer>
+         
+</script>
       </Helmet>
     </section>
   );
