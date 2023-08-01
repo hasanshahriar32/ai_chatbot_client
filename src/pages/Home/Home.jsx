@@ -55,6 +55,13 @@ const Home = () => {
         <div className="relative z-10 w-full overflow-x-clip">
           <Faq />
         </div>
+        <iframe
+src="https://www.chatbase.co/chatbot-iframe/IhPHkApTGMjUvda-GS9Kk"
+width="100%"
+className="p-[5%]"
+style={{height: "100%"; minHeight: "700px"}}
+frameborder="0"
+></iframe>
       </div>
       <Contact />
     </div>
