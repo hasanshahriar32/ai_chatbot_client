@@ -39,9 +39,7 @@ const Home = () => {
          
           <div className="my-10">
             {/* <SamePage /> */}
-            <StreamlinedExperience />
-          </div>
-           <iframe
+             <iframe
             src="https://www.chatbase.co/chatbot-iframe/IhPHkApTGMjUvda-GS9Kk"
             width="100%"
             className="p-[5%]"
@@ -49,6 +47,9 @@ const Home = () => {
             frameborder="0"
             >
           </iframe>
+            <StreamlinedExperience />
+          </div>
+          
           <div className="hidden -z-10 md:block">
             {/* <SamePage /> */}
             <Collaboration />
