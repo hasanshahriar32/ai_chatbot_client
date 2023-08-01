@@ -102,7 +102,7 @@ export const Collaboration = () => {
             <motion.div style={{ scale, x, y }} className="origin-top">
               <motion.img
                 style={{ opacity, position: positions }}
-                src="https://i.ibb.co/N9YgJjq/Screenshot-2023-07-22-130559.png"
+                src="https://i.ibb.co/vHFfw76/hero-hd.gif"
                 className={`h-auto max-h-none w-[70vw] `}
               />
               <motion.div
