@@ -27,7 +27,7 @@ const Developer = () => {
   });
   const text = "Consult Further?";
   return (
-    <div ref={ref} className="w-full  m-auto justify-center">
+    <div  className="w-full  m-auto justify-center" ref={ref}>
       <button
         onClick={handleClick}
         className="z-10  btn btn-ghost btn-link cursor-pointer"
@@ -42,7 +42,7 @@ const Developer = () => {
                 // animate={{}}
                 animate={inView ? { opacity: 1 } : "rotate: 360, scale: 1"}
                 className="text container"
-                transition={{ duration: 0.4, delay: index * 0.04 }}
+                transition={{ duration: 0.4, delay: index * 0.01 }}
               >
                 {letter}
               </motion.span>
