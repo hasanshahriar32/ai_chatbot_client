@@ -46,6 +46,7 @@ const Chat = () => {
   } `}
 </script>
 <script
+  className="hidden md:flex"
   src="https://www.chatbase.co/embed.min.js"
   id="IhPHkApTGMjUvda-GS9Kk"
   defer>
