@@ -36,7 +36,12 @@ const Home = () => {
         </div>
         <div className="container mx-auto ">
           <Price />
-          <iframe
+         
+          <div className="my-10">
+            {/* <SamePage /> */}
+            <StreamlinedExperience />
+          </div>
+           <iframe
             src="https://www.chatbase.co/chatbot-iframe/IhPHkApTGMjUvda-GS9Kk"
             width="100%"
             className="p-[5%]"
@@ -44,10 +49,6 @@ const Home = () => {
             frameborder="0"
             >
           </iframe>
-          <div className="my-10">
-            {/* <SamePage /> */}
-            <StreamlinedExperience />
-          </div>
           <div className="hidden -z-10 md:block">
             {/* <SamePage /> */}
             <Collaboration />
