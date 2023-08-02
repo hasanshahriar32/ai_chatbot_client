@@ -37,9 +37,9 @@ const Home = () => {
         <div className="container mx-auto ">
           <Price />
          
-          <div className="my-15">
+          <div className="mt-[200px]">
             {/* <SamePage /> */}
-            <h1 className="text-5xl font-bold text-center md:text-left mb-10">
+            <h1 className="text-5xl text-center font-bold text-center md:text-left">
               Demo Chat
             </h1>
              <iframe
