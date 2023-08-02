@@ -37,8 +37,11 @@ const Home = () => {
         <div className="container mx-auto ">
           <Price />
          
-          <div className="my-10">
+          <div className="my-15">
             {/* <SamePage /> */}
+            <h1 className="text-5xl font-bold text-center md:text-left mb-10">
+              Demo Chat
+            </h1>
              <iframe
             src="https://www.chatbase.co/chatbot-iframe/IhPHkApTGMjUvda-GS9Kk"
             width="100%"
