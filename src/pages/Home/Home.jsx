@@ -39,7 +39,7 @@ const Home = () => {
          
           <div className="mt-[120px]">
             {/* <SamePage /> */}
-            <h1 className="text-5xl text-center font-bold ">
+{/*             <h1 className="text-5xl text-center font-bold ">
               Demo Chat
             </h1>
              <iframe
@@ -49,7 +49,7 @@ const Home = () => {
             style={{height: "100%", minHeight: "700px"}}
             frameborder="0"
             >
-          </iframe>
+          </iframe> */}
             <StreamlinedExperience />
           </div>
           
