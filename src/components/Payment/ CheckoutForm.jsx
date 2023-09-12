@@ -22,7 +22,7 @@ const CheckoutForm = ({ agreeTerms, setModalOpen }) => {
   const id = packagE?._id;
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads
-    fetch("https://ai-chatbot-server.vercel.app/payment/create-intent", {
+    fetch("https://hstu-aichat-server.vercel.app/payment/create-intent", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -41,7 +41,7 @@ const CheckoutForm = ({ agreeTerms, setModalOpen }) => {
   const addToDb = (product) => {
     setModalOpen(true);
     console.log(product);
-    fetch("https://ai-chatbot-server.vercel.app/payment/resolve-intent", {
+    fetch("https://hstu-aichat-server.vercel.app/payment/resolve-intent", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

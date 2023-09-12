@@ -50,7 +50,7 @@ const LoginForm = () => {
         };
 
         //! Save User info to the database....
-        fetch("https://ai-chatbot-server.vercel.app/user", {
+        fetch("https://hstu-aichat-server.vercel.app/user", {
           method: "POST",
           headers: {
             "content-type": "application/json",

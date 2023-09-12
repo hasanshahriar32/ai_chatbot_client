@@ -30,7 +30,7 @@ const ManageProfitModal = ({ packageInfo, setPackageInfo, setRefetch }) => {
       };
 
       const { data: dataGet } = await axios.patch(
-        `https://ai-chatbot-server.vercel.app/package/${localStorage.getItem(
+        `https://hstu-aichat-server.vercel.app/package/${localStorage.getItem(
           "user_id"
         )}`,
         {

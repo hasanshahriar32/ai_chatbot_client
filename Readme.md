@@ -4,7 +4,7 @@
 
 Front-end: [Hstu Ai (hstu-ai.vercel.app)](https://hstu-ai.vercel.app/)
 
-Back-end Api documentation: <https://ai-chatbot-server.vercel.app/>
+Back-end Api documentation: <https://hstu-aichat-server.vercel.app/>
 
 ## Git Repositories
 
@@ -130,7 +130,7 @@ Aa a glance, the security features are:
 
 - The api’s are protected with jwt token.
 - When calling the protected api’s the developer will need to send the \_id as parameter along with Bearer token at header.
-- The full api documentation will be found here. [api docs for Hstu coders (ai-chatbot-server.vercel.app)](https://ai-chatbot-server.vercel.app/)
+- The full api documentation will be found here. [api docs for Hstu coders (ai-chatbot-server.vercel.app)](https://hstu-aichat-server.vercel.app/)
 
 ## Feature of this section:
 

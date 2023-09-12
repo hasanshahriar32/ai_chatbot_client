@@ -275,7 +275,7 @@ const AiQuery2 = () => {
         },
       };
       const { data: dataGet } = await axios.post(
-        `https://ai-chatbot-server.vercel.app/generate/suggestions/${localStorage.getItem(
+        `https://hstu-aichat-server.vercel.app/generate/suggestions/${localStorage.getItem(
           "user_id"
         )}`,
         {
@@ -325,7 +325,7 @@ const AiQuery2 = () => {
         },
       };
       const { data: dataGet } = await axios.post(
-        "https://ai-chatbot-server.vercel.app/session/favorite/switch",
+        "https://hstu-aichat-server.vercel.app/session/favorite/switch",
         {
           sessionId: aiConfig?.sessionId,
           uid: user?.uid,

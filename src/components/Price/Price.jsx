@@ -52,7 +52,7 @@ const Price = () => {
 
   const getPackage = async () => {
     const { data: dataGet } = await axios.get(
-      `https://ai-chatbot-server.vercel.app/package/all`
+      `https://hstu-aichat-server.vercel.app/package/all`
     );
     setPricingData(dataGet);
   };

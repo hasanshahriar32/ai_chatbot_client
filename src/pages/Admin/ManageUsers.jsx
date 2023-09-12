@@ -21,7 +21,7 @@ const ManageUsers = () => {
           },
         };
         const { data } = await axios.get(
-          `https://ai-chatbot-server.vercel.app/user/all?page=${page}&limit=8`,
+          `https://hstu-aichat-server.vercel.app/user/all?page=${page}&limit=8`,
           config
         );
         setUserData(data);
@@ -41,7 +41,7 @@ const ManageUsers = () => {
           },
         };
         const { data } = await axios.delete(
-          `https://ai-chatbot-server.vercel.app/admin/user/${id}`,
+          `https://hstu-aichat-server.vercel.app/admin/user/${id}`,
           config
         );
         if (data.deletedCount === 1) {
@@ -72,7 +72,7 @@ const ManageUsers = () => {
         },
       };
       const { data: dataGet } = await axios.post(
-        `https://ai-chatbot-server.vercel.app/transaction/admin/all/${localStorage.getItem(
+        `https://hstu-aichat-server.vercel.app/transaction/admin/all/${localStorage.getItem(
           "user_id"
         )}`,
         { uid },
