@@ -103,7 +103,7 @@ const AiQuery2 = () => {
         )
           .then((res) => res.json())
           .then((data) => {
-            console.log(data.message);
+            console.log(data?.message);
             const promptConfig2 = {
               ...promptConfig,
               finetune: data.message,
