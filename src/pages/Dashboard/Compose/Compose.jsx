@@ -44,7 +44,7 @@ const Compose = () => {
                   }`}
                   href=""
                 >
-                  Admission Help
+                  In Person Help
                 </Link>
               </li>
             </ul>
