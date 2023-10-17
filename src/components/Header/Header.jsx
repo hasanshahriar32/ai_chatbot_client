@@ -87,13 +87,13 @@ const Header = () => {
                 <Link to="/ai">Services</Link>
               </li>
               <li>
-                <Link to="/team">About Us</Link>
+                {/* <Link to="/team">About Us</Link> */}
               </li>
               <li>
                 <Link to="/faq">Faq</Link>
               </li>
               <li>
-                <Link to="/achievement">Achievement</Link>
+                {/* <Link to="/achievement">Achievement</Link> */}
               </li>
             </ul>
           </nav>

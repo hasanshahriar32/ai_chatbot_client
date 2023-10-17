@@ -1,8 +1,7 @@
 import classNames from "classnames";
 import { useEffect, useRef, useState } from "react";
 import { useInView } from "react-intersection-observer";
-import img from "../../assets/hero.webp";
-// import img from "../../assets/hero_sd.gif";
+import img2 from "../../assets/img/hero_sd.gif";
 
 const randomNumberBetween = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1) + min);
@@ -69,9 +68,9 @@ export const HeroImage = () => {
               className={classNames(
                 "absolute top-0 block h-[1px] w-[10rem] bg-glow-lines",
                 line.direction === "to left" &&
-                  `left-0 h-[1px] w-[calc(var(--size)*0.5rem)] animate-glow-line-horizontal md:w-[calc(var(--size)*1rem)]`,
+                `left-0 h-[1px] w-[calc(var(--size)*0.5rem)] animate-glow-line-horizontal md:w-[calc(var(--size)*1rem)]`,
                 line.direction === "to top" &&
-                  `right-0 h-[calc(var(--size)*0.5rem)] w-[1px] animate-glow-line-vertical md:h-[calc(var(--size)*1rem)]`
+                `right-0 h-[calc(var(--size)*0.5rem)] w-[1px] animate-glow-line-vertical md:h-[calc(var(--size)*1rem)]`
               )}
             />
           ))}
@@ -98,7 +97,7 @@ export const HeroImage = () => {
             "relative z-10 transition-opacity delay-[680ms]",
             inView ? "opacity-100" : "opacity-0"
           )}
-          src={herogif || img}
+          src={img2}
           alt="Hero image"
         />
       </div>

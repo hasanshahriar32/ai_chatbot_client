@@ -19,7 +19,7 @@ const Developer = () => {
   const handleClick = () => {
     console.log("clicked");
     //go to a link in a new window
-    window.open("https://shahriarhasan.vercel.app", "_blank");
+    window.open("https://www.shakeeb.me/", "_blank");
   };
   const [ref, inView] = useInView({
     triggerOnce: true, // Only trigger once when the component comes into view
@@ -27,7 +27,7 @@ const Developer = () => {
   });
   const text = "Consult Further?";
   return (
-    <div  className="w-full  m-auto justify-center" ref={ref}>
+    <div className="w-full  m-auto justify-center" ref={ref}>
       <button
         onClick={handleClick}
         className="z-10  btn btn-ghost btn-link cursor-pointer"

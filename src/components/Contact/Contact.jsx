@@ -10,12 +10,7 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs
-      .sendForm(
-        "service_uru6f1k",
-        "template_eqjpx0s",
-        form.current,
-        "de6ZUuk-3rquIvxwC"
-      )
+      .sendForm('service_uru6f1k', 'template_eqjpx0s', form.current, 'de6ZUuk-3rquIvxwC')
       .then(
         // eslint-disable-next-line no-unused-vars
         (result) => {
@@ -144,7 +139,7 @@ const Contact = () => {
                                 target="blank"
                                 className="text-neutral-500 dark:text-neutral-200"
                               >
-                                www.paradox-bd.com
+                                https://www.shakeeb.me/
                               </a>
                             </div>
                           </div>
@@ -174,12 +169,12 @@ const Contact = () => {
                                 Featured Projects
                               </p>
                               <a
-                                href="https://paradox-bd.com/portfolio"
+                                href="https://www.shakeeb.me/projects"
                                 target="_blank"
                                 rel="noreferrer"
                                 className="text-neutral-500 dark:text-neutral-200"
                               >
-                                www.paradox-bd.com/portfolio
+                                https://www.shakeeb.me/projects
                               </a>
                             </div>
                           </div>
@@ -209,12 +204,12 @@ const Contact = () => {
                                 QA Automation
                               </p>
                               <a
-                                href="https://www.paradox-bd.com/qa-automation"
+                                href="https://www.shakeeb.me/"
                                 target="_blank"
                                 rel="noreferrer"
                                 className="text-neutral-500 dark:text-neutral-200"
                               >
-                                www.paradox-bd.com/qa-automation
+                                https://www.shakeeb.me/projects
                               </a>
                             </div>
                           </div>
@@ -244,12 +239,12 @@ const Contact = () => {
                                 Community Outreach
                               </p>
                               <a
-                                href="https://community.paradox-bd.com/"
+                                href="https://www.shakeeb.me/projects"
                                 target="_blank"
                                 rel="noreferrer"
                                 className="text-neutral-500 dark:text-neutral-200"
                               >
-                                www.community.paradox-bd.com/
+                                https://www.shakeeb.me/projects
                               </a>
                             </div>
                           </div>

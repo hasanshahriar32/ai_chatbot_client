@@ -6,11 +6,11 @@ import HeroSection from "../../components/Hero/HeroSection";
 import Price from "../../components/Price/Price";
 import Showcase from "../../components/Showcase/Showcase";
 import { Container } from "../../components/features/container";
-import { StarsIllustration } from "../../components/features/stars";
+// import { StarsIllustration } from "../../components/features/stars";
 import { StreamlinedExperience } from "../../components/StreamlinedExperience/StreamlinedExperience";
-import { Collaboration } from "../../components/StreamlinedExperience/collaboration";
+// import { Collaboration } from "../../components/StreamlinedExperience/collaboration";
 // import { SamePage } from "../../components/StreamlinedExperience/same-page";
-import { Features } from "../../components/StreamlinedExperience/features";
+// import { Features } from "../../components/StreamlinedExperience/features";
 import Developer from "../../components/Hero/Developer";
 
 const Home = () => {
@@ -32,14 +32,14 @@ const Home = () => {
           )}
         >
           {" "}
-          <StarsIllustration />
+          {/* <StarsIllustration /> */}
         </div>
         <div className="container mx-auto ">
           <Price />
-         
+
           <div className="mt-[120px]">
             {/* <SamePage /> */}
-{/*             <h1 className="text-5xl text-center font-bold ">
+            {/*             <h1 className="text-5xl text-center font-bold ">
               Demo Chat
             </h1>
              <iframe
@@ -52,13 +52,13 @@ const Home = () => {
           </iframe> */}
             <StreamlinedExperience />
           </div>
-          
+
           <div className="hidden -z-10 md:block">
             {/* <SamePage /> */}
-            <Collaboration />
+            {/* <Collaboration /> */}
           </div>
         </div>
-        <Features />
+        {/* <Features /> */}
         <div className=" flex justify-center flex-col-reverse items-center">
           <div className="overflow-hidden relative bottom-15 mx-auto">
             <Developer />
@@ -67,7 +67,7 @@ const Home = () => {
         <div className="relative z-10 w-full overflow-x-clip">
           <Faq />
         </div>
-        
+
       </div>
       <Contact />
     </div>

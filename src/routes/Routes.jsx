@@ -3,7 +3,7 @@ import AdminRoute from "../components/Authentication/AdminRoute/AdminRoute";
 import PrivateRoute from "../components/Authentication/PrivateRoute/PrivateRoute";
 import Docs from "../components/Docs/Docs";
 import FAQ from "../components/Faq/Faq";
-import Team from "../components/Team/Team";
+// import Team from "../components/Team/Team";
 import AdminLayout from "../layout/Admin/Admin";
 import Dashboard from "../layout/Dashboard/Dashboard";
 import Main from "../layout/Main/Main";
@@ -20,7 +20,7 @@ import Home from "../pages/Home/Home";
 import ProfileEdit from "../pages/profile/ProfileEdit";
 import TransactionHistory from "../pages/profile/ProfileNavigation/TransactionHistory";
 import ProfilePage from "../pages/profile/ProfileSection";
-import Achievement from "../components/Hero/Achievement";
+// import Achievement from "../components/Hero/Achievement";
 
 const Routes = () => {
   const router = createBrowserRouter([
@@ -30,10 +30,10 @@ const Routes = () => {
       children: [
         { path: "/", element: <Home></Home> },
         { path: "/home", element: <Home></Home> },
-        { path: "/team", element: <Team></Team> },
+        // { path: "/team", element: <Team></Team> },
         { path: "/faq", element: <FAQ></FAQ> },
         { path: "/docs", element: <Docs></Docs> },
-        { path: "/achievement", element: <Achievement></Achievement> },
+        // { path: "/achievement", element: <Achievement></Achievement> },
       ],
     },
     {

@@ -4,7 +4,7 @@ import {
   AiFillTwitterCircle,
 } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import MeetTeam from "../Team/Components/MeetTeam";
+// import MeetTeam from "../Team/Components/MeetTeam";
 import { Container } from "../features/container";
 
 const footerLinks = [
@@ -56,7 +56,7 @@ const Footer = () => (
             NeuroNex - Assistance for Your Questions
           </div>
           <div className="lg:flex z-10 hidden relative right-5">
-            <MeetTeam />
+            {/* <MeetTeam /> */}
           </div>
           <div className="mt-auto flex space-x-4 text-grey">
             <AiFillGithub className="w-6 h-6" />
@@ -65,7 +65,7 @@ const Footer = () => (
           </div>
         </div>
         <div className="flex z-20 lg:hidden">
-          <MeetTeam />
+          {/* <MeetTeam /> */}
         </div>
       </div>
       <div className="flex flex-wrap">
